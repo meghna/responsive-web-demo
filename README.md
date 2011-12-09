@@ -1,0 +1,1 @@
+This is an example of a responsive web design build using Compass, [Susy] (http://susy.oddbird.net/), [Twitter bootstrap] (https://github.com/jlong/sass-twitter-bootstrap)

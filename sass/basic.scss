@@ -1,0 +1,70 @@
+// Imports -------------------------------------------------------------------
+
+@import "susyd/base";
+@import "compass/typography/vertical_rhythm";
+@import "compass/typography/lists";
+
+/* Flexible images ---------------------------- */
+img, embed, object, video {
+  max-width: 100%;
+}
+
+/* Layout ------------------------------------------------------------------*/
+
+body {
+  @include establish-baseline;
+}
+
+#container {
+  //@include container;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 900px;
+  @include susy-grid-background;
+}
+
+#container * {
+  background-color: rgba(0,0,0,.125);
+}
+
+/* Header --------------------------------------------------------------*/
+#header {
+  @include full;
+  
+  #banner {
+    @include columns($total-cols);
+    @include adjust-font-size-to(32px);
+    @include trailer(1);
+  }
+  
+  #message {
+    @include columns($total-cols);
+    @include adjust-font-size-to(20px);
+  }
+}
+
+#nav {
+  @include columns($total-cols);
+  @include leader(1);
+  @include trailer(1);
+  ul {
+    @include no-bullets;
+    @include horizontal-list;
+    @include adjust-font-size-to(24px);
+    > li {
+      @include columns(5);
+      @include suffix(2);
+    }
+  }
+}
+
+#content {
+  @include columns($total-cols);
+}
+
+#footer {
+  @include full();
+  @include pad($total-cols/4);
+  //@include columns($total-cols);
+  @include padding-leader(1);
+}

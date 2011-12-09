@@ -1,0 +1,88 @@
+//this will cover min-width >= 720px
+
+// Imports -------------------------------------------------------------------
+
+@import "susyd/base";
+@import "compass/typography/vertical_rhythm";
+@import "compass/typography/lists/bullets";
+@import "compass/utilities/links/hover-link";
+
+@media screen and (max-width: 768px) {
+  #header {
+    #banner {
+      @include pad(1,0);
+      @include columns(9);
+      @include adjust-font-size-to(32px);
+      @include trailer(1, 32px);
+    }
+    
+    #message {
+      @include columns(10);
+      @include omega();
+      @include adjust-font-size-to(32px);
+      @include trailer(1, 32px);
+      text-align: right;
+    }
+    
+  }
+  
+  #nav {
+    ul {
+      @include adjust-font-size-to(26px);
+    }
+  }
+  
+  #content {
+    @include adjust-font-size-to(24px);
+  }
+  
+  #footer {
+    @include adjust-font-size-to(18px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #header {
+    @include full;
+    @include leader(6,32px);
+    
+    #banner {
+      @include pad(1,0);
+      @include columns(9);
+      @include adjust-font-size-to(32px);
+      @include trailer(1,32px);
+    }
+    #message {
+      @include columns(10);
+      @include omega();
+      @include adjust-font-size-to(32px);
+      @include trailer(1,32px);
+      text-align: right;
+    }
+  }
+
+  #nav {
+    @include columns(5);
+    @include alpha;
+    text-align: right;
+    @include trailer(3);
+    ul {
+      @include no-bullets;
+    }
+    a {
+      @include hover-link;
+    }
+  }
+
+  #content {
+    @include columns(15);
+    @include omega;
+    @include trailer(3);
+  }
+
+  #footer {
+    @include full;
+    @include pad(3,3);
+  }
+  
+}

@@ -1,0 +1,24 @@
+//this will cover min-width >= 320px and min-width < 720px
+
+// Imports -------------------------------------------------------------------
+
+@import "susyd/base";
+@import "compass/typography/vertical_rhythm";
+
+@media screen and (min-width: 480px) {
+  #header {
+    #banner {
+      @include trailer(0.5);
+    }
+  }
+  
+  #nav {
+    ul {
+      @include adjust-font-size-to(26px);
+      > li {
+        @include columns(5);
+        @include suffix(2);
+      }
+    }
+  }
+}

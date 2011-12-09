@@ -1,0 +1,20 @@
+@media screen and (min-width: 480px) {
+  /* line 10, ../sass/mobile.scss */
+  #header #banner {
+    margin-bottom: 0.75em;
+  }
+
+  /* line 16, ../sass/mobile.scss */
+  #nav ul {
+    font-size: 1.625em;
+    line-height: 1.846em;
+  }
+  /* line 18, ../sass/mobile.scss */
+  #nav ul > li {
+    display: inline;
+    float: left;
+    width: 23.729%;
+    margin-right: 1.695%;
+    padding-right: 10.169%;
+  }
+}
